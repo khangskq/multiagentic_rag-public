@@ -17,7 +17,7 @@ class RetrievalCfg:
 
 @dataclass
 class SearchCfg:
-    n_articles: int = 5
+    n_articles: int = 50
     max_summary_chars: int = 1000
     languages: list[str] = field(default_factory=lambda: ["en"])
     sort_by: str = "relevancy"
