@@ -13,7 +13,7 @@ An AI-powered news chat system using Qwen2.5-7B-Instruct model and NewsAPI.
 ## Prerequisites
 
 - Python 3.12 or higher
-- NewsAPI key (get one at https://newsapi.org)
+- NewsAPI key (get one at https://newsapi.org) c4b96a9aeb6a4278ac728df4f4f265e8
 - GPU with 16GB+ VRAM (or Google Colab)
 
 ## Setup
@@ -65,9 +65,15 @@ tests/
 
 ### Local Development
 ```python
+import os
+import sys
+from dotenv import load_dotenv
 from multirag.agents import NewsRetriever, ArticleRetriever
 from multirag.engine import ModelEngine
 from langchain_huggingface import HuggingFaceEmbeddings
+
+# Load environment variables
+load_dotenv()
 
 # Initialize components
 model_engine = ModelEngine()
@@ -83,8 +89,9 @@ news_retriever = NewsRetriever(
     article_retriever=article_retriever
 )
 
-# Query news
-response = news_retriever.chat("What are the latest AI developments?")
+# Test the system
+query = "What are the latest AI developments?"
+response = news_retriever.chat(query)
 print(response)
 ```
 
