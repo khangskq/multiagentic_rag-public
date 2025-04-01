@@ -30,7 +30,7 @@ def setup_environment():
     if not os.path.exists(".env"):
         with open(".env", "w") as f:
             f.write("""
-NEWS_API_KEY=your_api_key_here
+NEWS_API_KEY=c4b96a9aeb6a4278ac728df4f4f265e8
 MODEL_NAME=Qwen/Qwen2.5-7B-Instruct
 MAX_TOKENS=500
 TEMPERATURE=0.7
