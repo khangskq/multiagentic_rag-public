@@ -67,7 +67,7 @@ class NewsRetriever:
             sort_by=self.search_cfg.sort_by,
             page_size=self.search_cfg.n_articles
         )
-        
+        print(response['articles'])
         return response['articles']
 
     def chat(self, query: str) -> str:
